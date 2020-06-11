@@ -28,13 +28,13 @@ jobs:
     -  name: GitHub Action for Yarn
        uses: Borales/actions-yarn@v2.3.0
        with:
-          cmd: install
+        cmd: install
       
-      - name: Creating Build
-        run: yarn build
+    -  name: Creating Build
+       run: yarn build
           
-    - name: Install Surge
-      run: npm install -g surge
+    -  name: Install Surge
+       run: npm install -g surge
       
-     - name: deployment using surge
+    -  name: deployment using surge
        run: surge ./build practice2_2020.surge.sh --token ${{secrets.TOKEN}}
